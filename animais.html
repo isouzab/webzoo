@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conheça as fichas detalhadas dos animais do WebZoo: onça-pintada, tucano-toco e capivara.">
+  <title>Animais | WebZoo</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/animais.js" defer></script>
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="Página inicial do WebZoo">
+        <img src="assets/imagens/webzoo_logo.png" alt="Logotipo WebZoo" width="180" height="58">
+      </a>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav id="nav-principal" class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="animais.html" aria-current="page">Animais</a></li>
+          <li><a href="visite.html">Visite</a></li>
+          <li><a href="participe.html">Participe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="page-header">
+      <div class="container">
+        <h1>Animais do WebZoo</h1>
+        <p>O Brasil é um dos países com maior diversidade de animais do planeta. Nesta página você conhece algumas das espécies mais marcantes da nossa fauna. Use os filtros para encontrar animais por classe ou tipo de alimentação.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filtros-panel" role="region" aria-label="Filtros de animais">
+          <div class="filtro-grupo">
+            <label for="filtro-classe">Filtrar por classe:</label>
+            <select id="filtro-classe">
+              <option value="todos">Todas as classes</option>
+              <option value="Mamífero">Mamíferos</option>
+              <option value="Ave">Aves</option>
+            </select>
+          </div>
+
+          <div class="filtro-grupo">
+            <label for="filtro-alimentacao">Filtrar por alimentação:</label>
+            <select id="filtro-alimentacao">
+              <option value="todos">Todas as alimentações</option>
+              <option value="Carnívoro">Carnívoro</option>
+              <option value="Onívoro">Onívoro</option>
+              <option value="Herbívoro">Herbívoro</option>
+            </select>
+          </div>
+
+          <button type="button" id="btn-limpar-filtros" class="btn btn-outline">Limpar filtros</button>
+        </div>
+
+        <p id="status-filtro" class="sr-only" aria-live="polite"></p>
+        <p id="mensagem-sem-resultados" class="alerta-vazio" hidden>Nenhum animal encontrado com esses filtros.</p>
+
+        <div class="fichas-grid" id="lista-animais">
+          <article class="ficha-animal" id="onca-pintada" data-classe="Mamífero" data-alimentacao="Carnívoro">
+            <figure class="ficha-img">
+              <img src="assets/imagens/onca_pintada.png" alt="Onça-pintada caminhando às margens de um rio na floresta" width="500" height="333">
+              <figcaption><em>Panthera onca</em> — Maior felino das Américas.</figcaption>
+            </figure>
+            <div class="ficha-conteudo">
+              <div class="ficha-topo">
+                <h2>Onça-pintada</h2>
+                <span class="status-conservacao status-quase">Quase ameaçada</span>
+              </div>
+              <p class="scientific-name">Nome científico: <em>Panthera onca</em></p>
+
+              <dl class="dados-animal">
+                <div>
+                  <dt>Classe:</dt>
+                  <dd>Mamífero</dd>
+                </div>
+                <div>
+                  <dt>Alimentação:</dt>
+                  <dd>Carnívoro</dd>
+                </div>
+                <div>
+                  <dt>Biomas:</dt>
+                  <dd>Amazônia, Pantanal, Cerrado, Mata Atlântica e Caatinga</dd>
+                </div>
+                <div>
+                  <dt>Estado de conservação:</dt>
+                  <dd>Quase ameaçada (IUCN)</dd>
+                </div>
+              </dl>
+
+              <p>A onça-pintada é o maior felino das Américas e o terceiro maior do mundo, atrás apenas do tigre e do leão. Seu corpo é forte e compacto, e a pelagem amarelada é coberta por manchas em forma de rosetas únicas em cada indivíduo.</p>
+              <p>É um animal solitário, excelente nadador e de hábitos principalmente noturnos. No topo da cadeia alimentar, caça capivaras, jacarés e veados, ajudando a manter o equilíbrio ecológico.</p>
+
+              <details class="ficha-detalhes">
+                <summary>Curiosidades e principais ameaças</summary>
+                <p><strong>Curiosidades:</strong> Um adulto pesa entre 55 e 100 kg. Existem onças de pelagem escura (onças-pretas), cujas rosetas continuam visíveis sob a luz.</p>
+                <p><strong>Ameaças:</strong> Perda e fragmentação do habitat, caça e conflitos com a criação de gado.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="ficha-animal" id="tucano-toco" data-classe="Ave" data-alimentacao="Onívoro">
+            <figure class="ficha-img">
+              <img src="assets/imagens/tucano_toco.png" alt="Tucano-toco com plumagem preta, papo branco e bico alaranjado pousado em um galho" width="500" height="333">
+              <figcaption><em>Ramphastos toco</em> — Maior espécie de tucano.</figcaption>
+            </figure>
+            <div class="ficha-conteudo">
+              <div class="ficha-topo">
+                <h2>Tucano-toco</h2>
+                <span class="status-conservacao status-pouco">Pouco preocupante</span>
+              </div>
+              <p class="scientific-name">Nome científico: <em>Ramphastos toco</em></p>
+
+              <dl class="dados-animal">
+                <div>
+                  <dt>Classe:</dt>
+                  <dd>Ave</dd>
+                </div>
+                <div>
+                  <dt>Alimentação:</dt>
+                  <dd>Onívoro</dd>
+                </div>
+                <div>
+                  <dt>Biomas:</dt>
+                  <dd>Cerrado, Pantanal e bordas de matas</dd>
+                </div>
+                <div>
+                  <dt>Estado de conservação:</dt>
+                  <dd>Pouco preocupante (IUCN)</dd>
+                </div>
+              </dl>
+
+              <p>O tucano-toco tem plumagem preta, garganta branca e um bico alaranjado com mancha escura na ponta que chega a 20 cm. Prefere áreas abertas como o Cerrado em vez de florestas fechadas.</p>
+              <p>Apesar do tamanho, seu bico é leve, formado por queratina com cavidades internas, usado para alcançar frutos em galhos finos e regular a temperatura corporal. Ao espalhar sementes, regenera a vegetação.</p>
+
+              <details class="ficha-detalhes">
+                <summary>Curiosidades e principais ameaças</summary>
+                <p><strong>Curiosidades:</strong> Mede de 55 a 65 cm. Para dormir, vira a cabeça e apoia o bico sobre as costas.</p>
+                <p><strong>Ameaças:</strong> Captura para o comércio ilegal de animais silvestres e perda de habitat.</p>
+              </details>
+            </div>
+          </article>
+
+          <article class="ficha-animal" id="capivara" data-classe="Mamífero" data-alimentacao="Herbívoro">
+            <figure class="ficha-img">
+              <img src="assets/imagens/capivara.png" alt="Capivara sentada na grama verde próxima à margem de um rio" width="500" height="333">
+              <figcaption><em>Hydrochoerus hydrochaeris</em> — Maior roedor do mundo.</figcaption>
+            </figure>
+            <div class="ficha-conteudo">
+              <div class="ficha-topo">
+                <h2>Capivara</h2>
+                <span class="status-conservacao status-pouco">Pouco preocupante</span>
+              </div>
+              <p class="scientific-name">Nome científico: <em>Hydrochoerus hydrochaeris</em></p>
+
+              <dl class="dados-animal">
+                <div>
+                  <dt>Classe:</dt>
+                  <dd>Mamífero</dd>
+                </div>
+                <div>
+                  <dt>Alimentação:</dt>
+                  <dd>Herbívoro</dd>
+                </div>
+                <div>
+                  <dt>Biomas:</dt>
+                  <dd>Presente em quase todo o Brasil, sempre perto da água</dd>
+                </div>
+                <div>
+                  <dt>Estado de conservação:</dt>
+                  <dd>Pouco preocupante (IUCN)</dd>
+                </div>
+              </dl>
+
+              <p>A capivara é o maior roedor do mundo, podendo passar de um metro de comprimento e pesar até 65 kg. Possui patas com pequenas membranas entre os dedos que facilitam a natação.</p>
+              <p>É um animal semiaquático que vive em grupos familiares de 10 a 20 indivíduos. Seus olhos, orelhas e narinas ficam no alto da cabeça para observar o ambiente enquanto permanece quase submersa.</p>
+
+              <details class="ficha-detalhes">
+                <summary>Curiosidades e convivência</summary>
+                <p><strong>Curiosidades:</strong> Seu nome vem do tupi e significa "comedor de capim". Os filhotes já nascem com pelos e olhos abertos.</p>
+                <p><strong>Convivência:</strong> Ao encontrá-la em parques urbanos, mantenha distância e não ofereça alimentos.</p>
+              </details>
+            </div>
+          </article>
+        </div>
+
+        <aside class="legenda-iucn" aria-label="Legenda do estado de conservação">
+          <h3>Legenda do Estado de Conservação (Lista Vermelha da IUCN)</h3>
+          <ul>
+            <li><strong>Pouco preocupante:</strong> a espécie não corre risco imediato.</li>
+            <li><strong>Quase ameaçada:</strong> pode se tornar ameaçada em um futuro próximo.</li>
+            <li><strong>Vulnerável:</strong> enfrenta risco alto de extinção na natureza.</li>
+            <li><strong>Em perigo:</strong> enfrenta risco muito alto de extinção na natureza.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WebZoo - Educação ambiental</h2>
+        <p>Projeto acadêmico e fictício, sem fins comerciais.</p>
+        <p>Desenvolvido por: <strong>[Seu Nome]</strong> - Disciplina de Front-End (SENAI Indaiatuba).</p>
+        <p>Imagens ilustrativas criadas por IA para a atividade.</p>
+        <p>Dados externos fornecidos por: <a href="https://viacep.com.br/" target="_blank" rel="noopener noreferrer">ViaCEP</a> e <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>.</p>
+      </div>
+      <address class="footer-address">
+        <strong>Zoológico de São Paulo</strong><br>
+        Av. Miguel Estéfano, 4241 - Água Funda<br>
+        São Paulo - SP | CEP 04301-905<br>
+        Telefone: (11) 5555-0142<br>
+        E-mail: <a href="mailto:contato@webzoo.example">contato@webzoo.example</a>
+      </address>
+    </div>
+  </footer>
+
+  <button type="button" id="btn-topo" class="btn-topo" aria-label="Voltar ao topo" hidden>↑ Topo</button>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WebZoo: plataforma de educação ambiental do Zoológico de São Paulo. Conhecer para preservar.">
+  <title>Início | WebZoo</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="Página inicial do WebZoo">
+        <img src="assets/imagens/favicon.png" alt="Logotipo WebZoo" width="180" height="58">
+      </a>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav id="nav-principal" class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">Início</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="visite.html">Visite</a></li>
+          <li><a href="participe.html">Participe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <span class="badge">Educação Ambiental</span>
+          <h1>WebZoo: conhecer para preservar</h1>
+          <p>Explore a fauna brasileira, descubra como vivem os animais e aprenda o que cada um de nós pode fazer para proteger os ambientes naturais.</p>
+          <div class="hero-actions">
+            <a href="animais.html" class="btn btn-primary">Conheça os animais</a>
+            <a href="visite.html" class="btn btn-secondary">Planeje sua visita</a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <img src="assets/imagens/floresta.png" alt="Mata Atlântica preservada com rio cristalino cercado por árvores e samambaias" width="600" height="400">
+          <figcaption>Área de Mata Atlântica preservada que abriga o Zoológico de São Paulo.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section sobre-section">
+      <div class="container">
+        <h2>Sobre o WebZoo</h2>
+        <p>O WebZoo é uma plataforma de educação ambiental do Zoológico de São Paulo. Seu objetivo é apresentar animais e seus ambientes, compartilhar curiosidades e incentivar o cuidado com a natureza.</p>
+        <p>Criada para aproximar o público da fauna brasileira, a plataforma reúne fichas de espécies e orientações para quem deseja visitar o zoológico. O conteúdo é pensado para estudantes, famílias e professores, com linguagem simples e informações confiáveis.</p>
+
+        <div class="mvv-grid">
+          <article class="card">
+            <h3>Missão</h3>
+            <p>Despertar o interesse pela vida selvagem e transformar curiosidade em atitude de preservação.</p>
+          </article>
+          <article class="card">
+            <h3>Visão</h3>
+            <p>Ser uma referência digital em educação ambiental, acessível a qualquer pessoa, em qualquer dispositivo.</p>
+          </article>
+          <article class="card">
+            <h3>Valores</h3>
+            <ul class="valores-list">
+              <li><strong>Respeito à vida:</strong> os animais vêm em primeiro lugar.</li>
+              <li><strong>Conhecimento:</strong> informação clara, correta e com fonte.</li>
+              <li><strong>Inclusão:</strong> conteúdo que todas as pessoas consigam acessar.</li>
+              <li><strong>Responsabilidade:</strong> cada atitude individual conta.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section destaques-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Animais em destaque</h2>
+          <p>Conheça algumas das espécies mais marcantes da fauna brasileira.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="animal-card">
+            <img src="assets/imagens/onca_pintada.png" alt="Onça-pintada caminhando às margens de um rio na floresta" width="400" height="267">
+            <div class="card-body">
+              <h3>Onça-pintada</h3>
+              <p class="scientific-name"><em>Panthera onca</em></p>
+              <p>A onça-pintada é um felino de pelagem marcada por manchas. É carnívora e pode ser encontrada em ambientes como florestas e áreas do Pantanal.</p>
+              <a href="animais.html#onca-pintada" class="btn btn-outline">Saiba mais sobre a onça-pintada</a>
+            </div>
+          </article>
+
+          <article class="animal-card">
+            <img src="assets/imagens/tucano_toco.png" alt="Tucano-toco com plumagem preta, papo branco e bico alaranjado pousado em um galho" width="400" height="267">
+            <div class="card-body">
+              <h3>Tucano-toco</h3>
+              <p class="scientific-name"><em>Ramphastos toco</em></p>
+              <p>O tucano-toco é uma ave conhecida pelo bico grande e colorido. Alimenta-se de frutos e também de pequenos animais. Pode ser encontrado no Cerrado.</p>
+              <a href="animais.html#tucano-toco" class="btn btn-outline">Saiba mais sobre o tucano-toco</a>
+            </div>
+          </article>
+
+          <article class="animal-card">
+            <img src="assets/imagens/capivara.png" alt="Capivara sentada na grama verde próxima à margem de um rio" width="400" height="267">
+            <div class="card-body">
+              <h3>Capivara</h3>
+              <p class="scientific-name"><em>Hydrochoerus hydrochaeris</em></p>
+              <p>A capivara é um roedor que vive em grupos e costuma permanecer perto de rios e lagos. É herbívora e se alimenta de plantas.</p>
+              <a href="animais.html#capivara" class="btn btn-outline">Saiba mais sobre a capivara</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section numeros-section">
+      <div class="container">
+        <h2>WebZoo em números e curiosidades</h2>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">3</span>
+            <span class="stat-label">Animais em destaque</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">4</span>
+            <span class="stat-label">Programas de educação ambiental</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">100%</span>
+            <span class="stat-label">Do conteúdo gratuito</span>
+          </div>
+        </div>
+
+        <aside class="curiosidades-box" aria-label="Curiosidades sobre a fauna">
+          <h3>Você sabia?</h3>
+          <ul>
+            <li>A onça-pintada é o maior felino das Américas e excelente nadadora.</li>
+            <li>A capivara é o maior roedor do mundo, podendo pesar até 65 kg.</li>
+            <li>O bico do tucano-toco é leve e ajuda a controlar a temperatura do corpo.</li>
+            <li>O lobo-guará não vive em alcateias: é um animal solitário.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WebZoo - Educação ambiental</h2>
+        <p>Projeto acadêmico e fictício, sem fins comerciais.</p>
+        <p>Desenvolvido por: <strong>[Seu Nome]</strong> - Disciplina de Front-End (SENAI Indaiatuba).</p>
+        <p>Imagens ilustrativas criadas por IA para a atividade.</p>
+        <p>Dados externos fornecidos por: <a href="https://viacep.com.br/" target="_blank" rel="noopener noreferrer">ViaCEP</a> e <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>.</p>
+      </div>
+      <address class="footer-address">
+        <strong>Zoológico de São Paulo</strong><br>
+        Av. Miguel Estéfano, 4241 - Água Funda<br>
+        São Paulo - SP | CEP 04301-905<br>
+        Telefone: (11) 5555-0142<br>
+        E-mail: <a href="mailto:contato@webzoo.example">contato@webzoo.example</a>
+      </address>
+    </div>
+  </footer>
+
+  <button type="button" id="btn-topo" class="btn-topo" aria-label="Voltar ao topo" hidden>↑ Topo</button>
+</body>
+</html>

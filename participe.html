@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Participe dos programas de educação ambiental do WebZoo e faça seu cadastro.">
+  <title>Participe | WebZoo</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/menu.js" defer></script>
+  <script src="js/cep.js" defer></script>
+  <script src="js/formulario.js" defer></script>
+</head>
+<body>
+  <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="logo-link" aria-label="Página inicial do WebZoo">
+        <img src="assets/imagens/webzoo_logo.png" alt="Logotipo WebZoo" width="180" height="58">
+      </a>
+
+      <button type="button" class="menu-toggle" id="menu-toggle" aria-controls="nav-principal" aria-expanded="false" aria-label="Abrir menu">
+        <span class="hamburger-icon" aria-hidden="true"></span>
+      </button>
+
+      <nav id="nav-principal" class="main-nav" aria-label="Navegação principal">
+        <ul class="nav-list">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="animais.html">Animais</a></li>
+          <li><a href="visite.html">Visite</a></li>
+          <li><a href="participe.html" aria-current="page">Participe</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="conteudo-principal">
+    <section class="page-header">
+      <div class="container">
+        <h1>Faça parte do WebZoo</h1>
+        <p>Cadastre-se para receber novidades, sugerir conteúdos ou agendar uma visita com a sua escola. Preservar a natureza é uma tarefa coletiva, e toda participação é bem-vinda.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Programas de educação ambiental</h2>
+        <div class="programas-grid">
+          <article class="card">
+            <h3>Zoo Escola</h3>
+            <p>Visitas guiadas para turmas do ensino fundamental e médio, com roteiro adaptado à idade dos estudantes.</p>
+          </article>
+          <article class="card">
+            <h3>Guardiões da Fauna</h3>
+            <p>Oficinas mensais para crianças e adolescentes sobre os animais brasileiros e seus ambientes.</p>
+          </article>
+          <article class="card">
+            <h3>Noite no Zoo</h3>
+            <p>Passeio noturno monitorado para conhecer os animais de hábitos noturnos.</p>
+          </article>
+          <article class="card">
+            <h3>Professor Parceiro</h3>
+            <p>Materiais gratuitos e encontros de formação para educadores.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container form-layout">
+        <div class="card form-card">
+          <h2>Formulário de cadastro</h2>
+          <p class="aviso-privacidade"><strong>Aviso:</strong> Site acadêmico. Não informe dados pessoais reais.</p>
+
+          <form id="form-cadastro" novalidate>
+            <div class="form-group">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" required autocomplete="name" aria-describedby="erro-nome">
+              <span class="erro-msg" id="erro-nome" aria-live="polite"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" required autocomplete="email" aria-describedby="erro-email">
+                <span class="erro-msg" id="erro-email" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(11) 99999-9999" autocomplete="tel" aria-describedby="erro-telefone">
+                <span class="erro-msg" id="erro-telefone" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row cep-row">
+              <div class="form-group">
+                <label for="cep">CEP *</label>
+                <input type="text" id="cep" name="cep" maxlength="9" placeholder="00000-000" required aria-describedby="ajuda-cep status-cep erro-cep">
+                <small id="ajuda-cep" class="help-text">Somente números, 8 dígitos.</small>
+                <span class="erro-msg" id="erro-cep" aria-live="polite"></span>
+              </div>
+              <div class="form-group cep-btn-wrap">
+                <button type="button" id="btn-buscar-cep" class="btn btn-secondary">Buscar endereço</button>
+              </div>
+            </div>
+            <p id="status-cep" class="api-status" aria-live="polite"></p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="rua">Rua / Logradouro *</label>
+                <input type="text" id="rua" name="rua" required aria-describedby="erro-rua">
+                <span class="erro-msg" id="erro-rua" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group form-group-sm">
+                <label for="numero">Número *</label>
+                <input type="text" id="numero" name="numero" required aria-describedby="erro-numero">
+                <span class="erro-msg" id="erro-numero" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="bairro">Bairro *</label>
+                <input type="text" id="bairro" name="bairro" required aria-describedby="erro-bairro">
+                <span class="erro-msg" id="erro-bairro" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="cidade">Cidade *</label>
+                <input type="text" id="cidade" name="cidade" required aria-describedby="erro-cidade">
+                <span class="erro-msg" id="erro-cidade" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group form-group-xs">
+                <label for="estado">UF *</label>
+                <input type="text" id="estado" name="estado" maxlength="2" required aria-describedby="erro-estado">
+                <span class="erro-msg" id="erro-estado" aria-live="polite"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="assunto">Assunto *</label>
+                <select id="assunto" name="assunto" required aria-describedby="erro-assunto">
+                  <option value="">Selecione uma opção</option>
+                  <option value="novidades">Receber novidades</option>
+                  <option value="visita-escolar">Visita escolar</option>
+                  <option value="sugerir">Sugerir conteúdo</option>
+                  <option value="outro">Outro</option>
+                </select>
+                <span class="erro-msg" id="erro-assunto" aria-live="polite"></span>
+              </div>
+
+              <div class="form-group">
+                <label for="animal-favorito">Animal favorito</label>
+                <select id="animal-favorito" name="animal-favorito">
+                  <option value="">Selecione um animal (opcional)</option>
+                  <option value="onca-pintada">Onça-pintada</option>
+                  <option value="tucano-toco">Tucano-toco</option>
+                  <option value="capivara">Capivara</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem" name="mensagem" rows="4" required aria-describedby="contador-msg erro-mensagem"></textarea>
+              <small id="contador-msg" class="help-text">0 caracteres (mínimo 10)</small>
+              <span class="erro-msg" id="erro-mensagem" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group checkbox-group">
+              <input type="checkbox" id="aceite" name="aceite" required aria-describedby="erro-aceite">
+              <label for="aceite">Aceito receber comunicações do WebZoo. *</label>
+              <span class="erro-msg" id="erro-aceite" aria-live="polite"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Enviar cadastro</button>
+          </form>
+
+          <div id="form-sucesso" class="sucesso-box" role="status" aria-live="polite" hidden></div>
+        </div>
+
+        <aside class="card ajuda-card">
+          <h2>Como você pode ajudar</h2>
+          <ul class="lista-ajuda">
+            <li>Descarte o lixo nos locais adequados.</li>
+            <li>Observe os animais sem tocar ou oferecer alimentos.</li>
+            <li>Respeite a vegetação e os espaços de preservação.</li>
+            <li>Nunca compre animais silvestres sem origem legal.</li>
+            <li>Reduza o uso de plásticos descartáveis.</li>
+            <li>Economize água e energia.</li>
+            <li>Ao dirigir em estradas próximas a áreas naturais, reduza a velocidade.</li>
+            <li>Denuncie maus-tratos e tráfico de animais aos órgãos ambientais.</li>
+            <li>Compartilhe o que você aprendeu com familiares e amigos.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h2>WebZoo - Educação ambiental</h2>
+        <p>Projeto acadêmico e fictício, sem fins comerciais.</p>
+        <p>Desenvolvido por: <strong>[Seu Nome]</strong> - Disciplina de Front-End (SENAI Indaiatuba).</p>
+        <p>Imagens ilustrativas criadas por IA para a atividade.</p>
+        <p>Dados externos fornecidos por: <a href="https://viacep.com.br/" target="_blank" rel="noopener noreferrer">ViaCEP</a> e <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a>.</p>
+      </div>
+      <address class="footer-address">
+        <strong>Zoológico de São Paulo</strong><br>
+        Av. Miguel Estéfano, 4241 - Água Funda<br>
+        São Paulo - SP | CEP 04301-905<br>
+        Telefone: (11) 5555-0142<br>
+        E-mail: <a href="mailto:contato@webzoo.example">contato@webzoo.example</a>
+      </address>
+    </div>
+  </footer>
+
+  <button type="button" id="btn-topo" class="btn-topo" aria-label="Voltar ao topo" hidden>↑ Topo</button>
+</body>
+</html>
